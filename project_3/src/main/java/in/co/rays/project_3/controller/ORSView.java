@@ -47,6 +47,9 @@ public interface ORSView {
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
 	public String BANK_VIEW = PAGE_FOLDER + "/BankView.jsp";
 	public String BANK_LIST_VIEW = PAGE_FOLDER + "/BankListView.jsp";
+	public String OWNER_VIEW = PAGE_FOLDER + "/OwnerView.jsp";
+	public String OWNER_LIST_VIEW = PAGE_FOLDER + "/OwnerListView.jsp";
+
 
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
@@ -83,6 +86,9 @@ public interface ORSView {
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
 	public String BANK_CTL = APP_CONTEXT + "/ctl/BankCtl";
 	public String BANK_LIST_CTL = APP_CONTEXT + "/ctl/BankListCtl";
+	public String OWNER_CTL = APP_CONTEXT + "/ctl/OwnerCtl";
+	public String OWNER_LIST_CTL = APP_CONTEXT + "/ctl/OwnerListCtl";
+
 
 
 }

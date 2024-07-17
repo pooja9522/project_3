@@ -47,8 +47,6 @@
 		<mapping
 			resource="in/co/rays/project_3/hbm/ProductDTO.hbm.xml" />
 		<mapping
-		    resource="in/co/rays/project_3/hbm/BankDTO.hbm.xml" />	
-		<mapping
-		    resource="in/co/rays/project_3/hbm/OwnerDTO.hbm.xml" />	    
+		    resource="in/co/rays/project_3/hbm/BankDTO.hbm.xml"    />	
 	</session-factory>
 </hibernate-configuration>

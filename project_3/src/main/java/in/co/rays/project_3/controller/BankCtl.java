@@ -1,3 +1,5 @@
+
+
 package in.co.rays.project_3.controller;
 
 import java.io.IOException;
@@ -27,72 +29,144 @@ import in.co.rays.project_3.util.ServletUtility;
 public class BankCtl extends BaseCtl {
 
 	protected void preload(HttpServletRequest request) {
-
+	
 		HashMap map = new HashMap();
-		map.put("prepaid", "prepaid");
-		map.put("postpaid", "postpaid");
+		map.put("indore", "indore");
+		map.put("ujjain", "ujjain");
+		
 		request.setAttribute("map", map);
 
-	}
 
+	}
+					
 	protected boolean validate(HttpServletRequest request) {
 		boolean pass = true;
-
+		
 		if (DataValidator.isNull(request.getParameter("name"))) {
-			request.setAttribute("name", PropertyReader.getValue("error.require", "name"));
+			request.setAttribute("name", PropertyReader.getValue("error.require", " name"));
+			
 			pass = false;
 		} else if (!DataValidator.isName(request.getParameter("name"))) {
-			request.setAttribute("name", " Name contains alphabet only ");
+			request.setAttribute("name", " name must contains alphabets only");
+			System.out.println(pass);
 			pass = false;
+
+		}
+		 else if (DataValidator.isTooLong(request.getParameter("name"),50)) {
+				request.setAttribute("name", "name must contain max 50 charactor  ");
+				pass = false;
+			}
+		
+		if (DataValidator.isNull(request.getParameter("address"))) {
+			request.setAttribute("address", PropertyReader.getValue("error.require", "address"));
+			System.out.println(pass);
+			pass = false;
+		} else if (!DataValidator.isName(request.getParameter("address"))) {
+			request.setAttribute("address", "address must contains alphabets only");
+			System.out.println(pass);
+			pass = false;
+
+		}
+		if (!OP_UPDATE.equalsIgnoreCase(request.getParameter("operation"))) {
+			/*
+			 * if (DataValidator.isNull(request.getParameter("password"))) {
+			 * request.setAttribute("password", PropertyReader.getValue("error.require",
+			 * "Password")); System.out.println(pass); pass = false; }
+			 */
+			/*
+			 * else if (!DataValidator.isPassword(request.getParameter("password"))) {
+			 * request.setAttribute("password",
+			 * PropertyReader.getValue("Enter the valid Password"));
+			 * System.out.println(pass); pass = false; }
+			 * 
+			 * if (DataValidator.isNull(request.getParameter("confirmPassword"))) {
+			 * request.setAttribute("confirmPassword",
+			 * PropertyReader.getValue("error.require", "Confirm Password"));
+			 * System.out.println(pass); pass = false; } else if
+			 * (!DataValidator.isPassword(request.getParameter("confirmPassword"))){
+			 * request.setAttribute("confirmPassword",PropertyReader.
+			 * getValue("Enter the valid confirmPassword")); pass = false; }
+			 * 
+			 * 
+			 * else if (!request.getParameter("password").equals(request.getParameter(
+			 * "confirmPassword"))) { request.setAttribute("confirmPassword",
+			 * "Confirm Password should  be matched."); pass = false; } }if
+			 * (DataValidator.isNull(request.getParameter("role"))) {
+			 * request.setAttribute("role", PropertyReader.getValue("error.require",
+			 * "role")); pass = false; } if
+			 * (DataValidator.isNull(request.getParameter("gender"))) {
+			 * request.setAttribute("gender", PropertyReader.getValue("error.require",
+			 * "gender")); pass = false; } 
+			 *
+			 */
+		
+			if(DataValidator.isNull(request.getParameter("accountNumber"))) {
+			  request.setAttribute("accountNumber", PropertyReader.getValue("error.require", "accountNumber"));
+			  pass = false;
+		}
 			
-		}
-		else if (!DataValidator.isTooLong("name", 45)) {
-			request.setAttribute("name", "Name too long  ");
-			pass = false;
-		}
+			 
+
+		/*
+		 * if (DataValidator.isNull(request.getParameter("emailId"))) {
+		 * request.setAttribute("emailId", PropertyReader.getValue("error.require",
+		 * "email Id")); pass = false; } else if
+		 * (!DataValidator.isEmail(request.getParameter("emailId"))) {
+		 * request.setAttribute("emailId", PropertyReader.getValue("error.email",
+		 * "Email Id ")); pass = false; }
+		 */
+		
 		if (DataValidator.isNull(request.getParameter("dob"))) {
 			request.setAttribute("dob", PropertyReader.getValue("error.require", "dob"));
 			pass = false;
-		} else if (!DataValidator.isDate(request.getParameter("dob"))) {
-			request.setAttribute("dob", PropertyReader.getValue("error.require", "dob"));			
-			pass = false;
-		}
-
-		if (DataValidator.isNull(request.getParameter("accountNo"))) {
-			request.setAttribute("accountNo", PropertyReader.getValue("error.require", "accountNo"));
-			pass = false;
-		} else if (!DataValidator.isInteger(request.getParameter("accountNo"))) {
-			request.setAttribute("accountNo", " AccountNo contains digit only");
-			pass = false;
-		}
-		if (DataValidator.isNull(request.getParameter("address"))) {
-			request.setAttribute("address", PropertyReader.getValue("error.require", "address"));
-			pass = false;
 		
 		}
+		/*
+		 * else if (!DataValidator.isDate(request.getParameter("dob"))) {
+		 * request.setAttribute("dob", PropertyReader.getValue("error.date",
+		 * "Date Of Birth")); pass = false; }else if
+		 * (!DataValidator.isValidAge(request.getParameter("dob"))) {
+		 * 
+		 * request.setAttribute("dob", "Age Must be greater then 18 year"); pass =
+		 * false;
+		 */
+		
+		}
+		
 		return pass;
 
-		
 	}
-	
 
 	protected BaseDTO populateDTO(HttpServletRequest request) {
 		BankDTO dto = new BankDTO();
-
+		
+         
+         System.out.println(request.getParameter("dob"));      
+   
 		dto.setId(DataUtility.getLong(request.getParameter("id")));
-		System.out.println(dto.getId() + "idddddddddddddddddddddd");
-		dto.setName(DataUtility.getString(request.getParameter("name")));
+
+	//	dto.setRoleId(DataUtility.getLong(request.getParameter("role")));
 		dto.setDob(DataUtility.getDate(request.getParameter("dob")));
+		dto.setName(DataUtility.getString(request.getParameter("name")));
+
 		dto.setAccountNumber(DataUtility.getString(request.getParameter("accountNumber")));
+
 		dto.setAddress(DataUtility.getString(request.getParameter("address")));
 
+		//dto.setPassword(DataUtility.getString(request.getParameter("password")));
 
-		populateBean(dto, request);
+		//dto.setConfirmPassword(DataUtility.getString(request.getParameter("confirmPassword")));
+
+		//dto.setGender(DataUtility.getString(request.getParameter("gender")));
+		//dto.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
+        
+		populateBean(dto,request);
+		
 
 		return dto;
 
 	}
-
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		String op = DataUtility.getString(request.getParameter("operation"));
@@ -111,24 +185,23 @@ public class BankCtl extends BaseCtl {
 		}
 		ServletUtility.forward(getView(), request, response);
 	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String op = DataUtility.getString(request.getParameter("operation"));
 		BankModelInt model = ModelFactory.getInstance().getBankModel();
 		long id = DataUtility.getLong(request.getParameter("id"));
-		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
+		if (OP_SAVE.equalsIgnoreCase(op)||OP_UPDATE.equalsIgnoreCase(op)) {
 			BankDTO dto = (BankDTO) populateDTO(request);
 			try {
 				if (id > 0) {
 					model.update(dto);
-
+					
 					ServletUtility.setSuccessMessage("Data is successfully Update", request);
 				} else {
-
+					
 					try {
-						model.add(dto);
-						ServletUtility.setDto(dto, request);
+						 model.add(dto);
+						 ServletUtility.setDto(dto, request);
 						ServletUtility.setSuccessMessage("Data is successfully saved", request);
 					} catch (ApplicationException e) {
 						ServletUtility.handleException(e, request, response);
@@ -140,7 +213,8 @@ public class BankCtl extends BaseCtl {
 
 				}
 				ServletUtility.setDto(dto, request);
-
+				
+				
 			} catch (ApplicationException e) {
 				ServletUtility.handleException(e, request, response);
 				return;
@@ -178,5 +252,7 @@ public class BankCtl extends BaseCtl {
 		// TODO Auto-generated method stub
 		return ORSView.BANK_VIEW;
 	}
+
+	
 
 }

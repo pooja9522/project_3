@@ -56,6 +56,22 @@ public final class ModelFactory {
 
 		return bankModel;
 	}
+	public OwnerModelInt getOwnerModel() {
+
+		OwnerModelInt OwnerModel = (OwnerModelInt) modelCache.get("OwnerModel");
+		if (OwnerModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				OwnerModel = new OwnerModelHibImp();
+			}
+			/*
+			 * if ("JDBC".equals(DATABASE)) { bankModel = new UserModelJDBCImpl(); }
+			 */
+			modelCache.put("OwnerModel",OwnerModel);
+		}
+
+		return OwnerModel;
+	}
+
 
 
 	public MarksheetModelInt getMarksheetModel() {

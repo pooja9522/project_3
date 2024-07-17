@@ -28,7 +28,7 @@
 
 <style type="text/css">
 .aj {
-	background-image: linear-gradient(to bottom right, grey, black,red);
+	background-image: linear-gradient(to bottom right, grey, black, red);
 }
 </style>
 </head>
@@ -147,9 +147,9 @@
 							href="<%=ORSView.COLLEGE_LIST_CTL%>"><i
 							class="fa fa-building"></i>College List </a>
 					</div></li>
-					
-						
-					                        <li class="nav-item dropdown" style="padding-left: 5px;"><a
+
+
+				<li class="nav-item dropdown" style="padding-left: 5px;"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: White;">Bank</font>
@@ -159,7 +159,26 @@
 							class="fas fa-user-circle"></i>Add Bank
 						</a> <a class="dropdown-item" href="<%=ORSView.BANK_LIST_CTL%>"><i
 							class="fas fa-user-friends"></i>Bank List</a>
-					</div></li> 
+					</div></li>
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Owner</font>
+
+				</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.OWNER_CTL%>"><i
+							class="fas fa-calculator"></i>Add Owner</a> <a class="dropdown-item"
+							href="<%=ORSView.OWNER_LIST_CTL%>"> <i
+							class="fas fa-sort-amount-down"></i>Owner List
+
+						</a>
+
+					</div></li>
+
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
