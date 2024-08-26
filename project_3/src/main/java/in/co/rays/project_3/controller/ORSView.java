@@ -56,9 +56,10 @@ public interface ORSView {
 	public String PRODUCTDETAILS_LIST_VIEW = PAGE_FOLDER + "/ProductDetailsListView.jsp";
    
 	
-	public String POOJA_VIEW = PAGE_FOLDER + "/PoojaView.jsp";
-	public String POOJA_LIST_VIEW = PAGE_FOLDER + "/PoojaListView.jsp";
-
+	/*
+	 * public String POOJA_VIEW = PAGE_FOLDER + "/PoojaView.jsp"; public String
+	 * POOJA_LIST_VIEW = PAGE_FOLDER + "/PoojaListView.jsp";
+	 */
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
@@ -102,7 +103,8 @@ public interface ORSView {
 	public String PRODUCTDETAILS_CTL = APP_CONTEXT + "/ctl/ProductDetailsCtl";
 	public String PRODUCTDETAILS_LIST_CTL = APP_CONTEXT + "/ctl/ProductDetailsListCtl";
 
-	public String POOJA_CTL = APP_CONTEXT + "/ctl/PoojaCtl";
-	public String POOJA_LIST_CTL = APP_CONTEXT + "/ctl/PoojaListCtl";
-
+	/*
+	 * public String POOJA_CTL = APP_CONTEXT + "/ctl/PoojaCtl"; public String
+	 * POOJA_LIST_CTL = APP_CONTEXT + "/ctl/PoojaListCtl";
+	 */
 }
