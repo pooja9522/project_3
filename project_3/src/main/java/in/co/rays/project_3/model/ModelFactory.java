@@ -232,21 +232,21 @@ public final class ModelFactory {
 		
 	}
 
-	/*
-	 * public PoojaModelInt getPoojaModel() {
-	 * 
-	 * 
-	 * PoojaModelInt PoojaModel = (PoojaModelInt) modelCache.get("Model"); if
-	 * (PoojaModel == null) { if ("Hibernate".equals(DATABASE)) { PoojaModel = new
-	 * PoojaModelHibImp(); }
-	 * 
-	 * modelCache.put("PoojaModel", PoojaModel); }
-	 * 
-	 * return PoojaModel;
-	 * 
-	 * 
-	 * }
-	 */
+	
+	  public PoojaModelInt getPoojaModel() {
+	  
+	  
+	  PoojaModelInt PoojaModel = (PoojaModelInt) modelCache.get("Model"); if
+	  (PoojaModel == null) { if ("Hibernate".equals(DATABASE)) { PoojaModel = new
+	  PoojaModelHibImp(); }
+	  
+	  modelCache.put("PoojaModel", PoojaModel); }
+	  
+	  return PoojaModel;
+	  
+	  
+	  }
+	 
 	}
 
 	

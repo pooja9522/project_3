@@ -196,13 +196,18 @@ return 0;
 }
 }
 
-public static Double getDouble(String val) {
-System.out.println("........in dataUtility..........."+val);
-if (DataValidator.isDouble(val)) {
-System.out.println("........in dataUtility"+val+",,,,,,"+Long.parseLong(val));
-return Double.parseDouble(val);
-} else {
-return (Double) 0.0;
-}
-}
-}
+public static double getDouble(String str) {
+    double result = 0.0; // Default value or any meaningful default
+    if (str != null && !str.isEmpty()) {
+        try {
+            result = Double.parseDouble(str);
+        } catch (NumberFormatException e) {
+            // Handle the case where parsing fails
+            e.printStackTrace(); // Or log the error
+        } 
+    } else {
+        // Handle the case where str is null or empty
+        // Example: throw an exception, provide a default value, etc.
+    }
+    return result;
+}}

@@ -278,17 +278,21 @@ public class DataValidator {
 		System.out.println("Is Int"+isInteger("123"));
 		System.out.println("is Int"+isNotNull("123"));
 	}
-	public static boolean isDouble(String val){
-		if(isNotNull(val)){
-			try{
-				double i=Double.parseDouble(val);
-				return true;
-			}catch(NumberFormatException e){
-				return false;
-			}
-		}else{
-			return false;
-		}
+	public static double getDouble(String str) {
+	    double result = 0.0; // Default value or any meaningful default
+	    if (str != null && !str.isEmpty()) {
+	        try {
+	            result = Double.parseDouble(str);
+	        } catch (NumberFormatException e) {
+	            // Handle the case where parsing fails
+	            e.printStackTrace(); // Or log the error
+	        } 
+	    } else {
+	        // Handle the case where str is null or empty
+	        // Example: throw an exception, provide a default value, etc.
+	    }
+	    return result;
+	}
 	} 
 		
-}
+
