@@ -60,9 +60,9 @@
 		    <mapping
 		    resource="in/co/rays/project_3/hbm/ProductDetailsDTO.hbm.xml" />  
 		   
-		     <mapping
+		<!--      <mapping
 		    resource="in/co/rays/project_3/hbm/PoojaDTO.hbm.xml" />  
-		  
+		   -->
 		   
 	</session-factory>
 </hibernate-configuration>
