@@ -49,7 +49,15 @@ public interface ORSView {
 	public String BANK_LIST_VIEW = PAGE_FOLDER + "/BankListView.jsp";
 	public String OWNER_VIEW = PAGE_FOLDER + "/OwnerView.jsp";
 	public String OWNER_LIST_VIEW = PAGE_FOLDER + "/OwnerListView.jsp";
+	public String CLIENT_VIEW = PAGE_FOLDER + "/ClientView.jsp";
+	public String CLIENT_LIST_VIEW = PAGE_FOLDER + "/ClientListView.jsp";
 
+	public String PRODUCTDETAILS_VIEW = PAGE_FOLDER + "/ProductDetailsView.jsp";
+	public String PRODUCTDETAILS_LIST_VIEW = PAGE_FOLDER + "/ProductDetailsListView.jsp";
+   
+	
+	public String POOJA_VIEW = PAGE_FOLDER + "/PoojaView.jsp";
+	public String POOJA_LIST_VIEW = PAGE_FOLDER + "/PoojaListView.jsp";
 
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
@@ -88,7 +96,13 @@ public interface ORSView {
 	public String BANK_LIST_CTL = APP_CONTEXT + "/ctl/BankListCtl";
 	public String OWNER_CTL = APP_CONTEXT + "/ctl/OwnerCtl";
 	public String OWNER_LIST_CTL = APP_CONTEXT + "/ctl/OwnerListCtl";
+	public String CLIENT_CTL = APP_CONTEXT + "/ctl/ClientCtl";
+	public String CLIENT_LIST_CTL = APP_CONTEXT + "/ctl/ClientListCtl";
 
+	public String PRODUCTDETAILS_CTL = APP_CONTEXT + "/ctl/ProductDetailsCtl";
+	public String PRODUCTDETAILS_LIST_CTL = APP_CONTEXT + "/ctl/ProductDetailsListCtl";
 
+	public String POOJA_CTL = APP_CONTEXT + "/ctl/PoojaCtl";
+	public String POOJA_LIST_CTL = APP_CONTEXT + "/ctl/PoojaListCtl";
 
 }

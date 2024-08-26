@@ -15,7 +15,7 @@ public final class ModelFactory {
 	private static ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.project_3.bundle.system");
 	private static final String DATABASE = rb.getString("DATABASE");
 	private static ModelFactory mFactory = null;
-	private static HashMap modelCache = new HashMap();
+	private static HashMap modelCache = new HashMap();//non forgotable memory
 
 	private ModelFactory() {
 
@@ -28,19 +28,6 @@ public final class ModelFactory {
 		return mFactory;
 	}
 
-	public ProductModelInt getProductModel() {
-		ProductModelInt productModel = (ProductModelInt) modelCache.get("productModel");
-		if (productModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				productModel = new ProductModelHibImp();
-			}
-			if ("JDBC".equals(DATABASE)) {
-				productModel = new ProductModelHibImp();
-			}
-			modelCache.put("productModel", productModel);
-		}
-		return productModel;
-	}
 	public BankModelInt getBankModel() {
 
 		BankModelInt bankModel = (BankModelInt) modelCache.get("bankModel");
@@ -71,6 +58,25 @@ public final class ModelFactory {
 
 		return OwnerModel;
 	}
+
+	
+	public ProductDetailsModelInt getProductDetailsModel() {
+
+		ProductDetailsModelInt ProductDetailsModel = (ProductDetailsModelInt) modelCache.get("ProductDetailsModel");
+		if (ProductDetailsModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				ProductDetailsModel = new ProductDetailsModelHibImp();
+			}
+			/*
+			 * if ("JDBC".equals(DATABASE)) { bankModel = new UserModelJDBCImpl(); }
+			 */
+			modelCache.put("ProductDetailsModel",ProductDetailsModel);
+		}
+
+		return ProductDetailsModel;
+	}
+
+
 
 
 
@@ -210,4 +216,39 @@ public final class ModelFactory {
 
 		return facultyModel;
 	}
-}
+
+	public ClientModelInt getClientModel() {
+		ClientModelInt ClientModel = (ClientModelInt) modelCache.get("Model");
+		if (ClientModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				ClientModel = new ClientModelHibImp();
+			}
+			
+			modelCache.put("ClientModel", ClientModel);
+		}
+
+		return ClientModel;
+
+		
+	}
+
+	public PoojaModelInt getPoojaModel() {
+		
+		
+		PoojaModelInt PoojaModel = (PoojaModelInt) modelCache.get("Model");
+		if (PoojaModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				PoojaModel = new PoojaModelHibImp();
+			}
+			
+			modelCache.put("PoojaModel", PoojaModel);
+		}
+
+		return PoojaModel;
+
+		
+	}
+
+	}
+
+	

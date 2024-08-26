@@ -28,7 +28,7 @@
 
 <style type="text/css">
 .aj {
-	background-image: linear-gradient(to bottom right, grey, black, red);
+	background-image: linear-gradient(to bottom right, grey, black,red );
 }
 </style>
 </head>
@@ -149,7 +149,7 @@
 					</div></li>
 
 
-				<li class="nav-item dropdown" style="padding-left: 5px;"><a
+			 	 <li class="nav-item dropdown" style="padding-left: 5px;"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: White;">Bank</font>
@@ -178,8 +178,28 @@
 						</a>
 
 					</div></li>
+					
+						<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Client</font>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+				</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.CLIENT_CTL%>"><i
+							class="fas fa-calculator"></i>Add Client</a> <a class="dropdown-item"
+							href="<%=ORSView.CLIENT_LIST_CTL%>"> <i
+							class="fas fa-sort-amount-down"></i>Client List
+
+						</a>
+
+					</div></li>
+					
+					
+				 
+ 			<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Course
@@ -237,26 +257,43 @@
 							class="fa fa-sort-amount-down"></i>Subject List
 						</a>
 					</div></li>
-
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					
+					
+					
+					<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">Product
-					</font></a>
-
+					aria-expanded="false"> <font style="color: white;">Product</font>
+				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-						<a class="dropdown-item" href="<%=ORSView.PRODUCT_CTL%>"><i
-							class="fa fa-file"></i>Add Product</a> <a class="dropdown-item"
-							href="<%=ORSView.PRODUCT_LIST_CTL%>"><i class="fa fa-paste"></i>Product
-							List</a>
+						<a class="dropdown-item" href="<%=ORSView.PRODUCTDETAILS_CTL%>"><i
+							class="fa fa-calculator"></i>Add Product</a> <a class="dropdown-item"
+							href="<%=ORSView.PRODUCTDETAILS_LIST_CTL%>"> <i
+							class="fa fa-sort-amount-down"></i>Product List
+						</a>
 					</div></li>
+					
+					
+						<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">pooja</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.POOJA_CTL%>"><i
+							class="fa fa-calculator"></i>Add number</a> <a class="dropdown-item"
+							href="<%=ORSView.POOJA_LIST_CTL%>"> <i
+							class="fa fa-sort-amount-down"></i>Add List
+						</a>
+					</div></li>
+				
+					
 
-				<%
+								<%
 					}
 					}
 				%>
-				<li class="nav-item dropdown"
+			<li class="nav-item dropdown"
 					style="padding-left: 5px; padding-right: 67px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"

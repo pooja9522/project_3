@@ -195,4 +195,14 @@ return tm.getTime();
 return 0;
 }
 }
+
+public static Double getDouble(String val) {
+System.out.println("........in dataUtility..........."+val);
+if (DataValidator.isDouble(val)) {
+System.out.println("........in dataUtility"+val+",,,,,,"+Long.parseLong(val));
+return Double.parseDouble(val);
+} else {
+return (Double) 0.0;
+}
+}
 }

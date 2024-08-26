@@ -201,8 +201,11 @@ public class UserCtl extends BaseCtl {
 		}
 		ServletUtility.forward(getView(), request, response);
 	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	
+		@Override
+		protected void doPost(HttpServletRequest request, HttpServletResponse response)
+				throws ServletException, IOException {
+		
 		String op = DataUtility.getString(request.getParameter("operation"));
 		System.out.println("-------------------------------------------------------------------------dopost run-------");
 		// get model

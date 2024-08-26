@@ -150,7 +150,7 @@ public class DataValidator {
 			return false;
 		}
 	}
-
+	
 	/**
 	 * Checks if value of Mobile No is 10
 	 * 
@@ -165,6 +165,35 @@ public class DataValidator {
 			return false;
 		}
 	}
+
+
+	
+	public static boolean isMobileNo1(String val) {
+
+		String phonereg = "^[6-9][0-9]{9}$";
+
+		if (isNotNull(val)) {
+			try {
+				return val.matches(phonereg);
+			} catch (NumberFormatException e) {
+				return false;
+			}
+
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean isMobileLength(String val) {
+
+		if (isNotNull(val) && val.length() == 10) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+
 
 	/**
 	 * Checks if value is Date
@@ -249,5 +278,17 @@ public class DataValidator {
 		System.out.println("Is Int"+isInteger("123"));
 		System.out.println("is Int"+isNotNull("123"));
 	}
-	
+	public static boolean isDouble(String val){
+		if(isNotNull(val)){
+			try{
+				double i=Double.parseDouble(val);
+				return true;
+			}catch(NumberFormatException e){
+				return false;
+			}
+		}else{
+			return false;
+		}
+	} 
+		
 }
