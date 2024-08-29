@@ -78,6 +78,22 @@ public final class ModelFactory {
 
 
 
+	public SalaryModelInt getSalaryModel() {
+
+		SalaryModelInt SalaryModel = (SalaryModelInt) modelCache.get("SalaryModel");
+		if (SalaryModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				SalaryModel =  new SalaryModelHibImp();
+			}
+			/*
+			 * if ("JDBC".equals(DATABASE)) { bankModel = new UserModelJDBCImpl(); }
+			 */
+			modelCache.put("SalaryModel",SalaryModel);
+		}
+
+		return SalaryModel;
+	}
+
 
 
 	public MarksheetModelInt getMarksheetModel() {
@@ -246,7 +262,38 @@ public final class ModelFactory {
 	  
 	  
 	  }
+
+	public StaffMemberModelInt getStaffMemberModel() {
+		StaffMemberModelInt StaffMemberModel = (StaffMemberModelInt) modelCache.get("Model");
+		if (StaffMemberModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				StaffMemberModel = new StaffMemberModelHibImp();
+			}
+			
+			modelCache.put("StaffMemberModel", StaffMemberModel);
+		}
+
+		return StaffMemberModel;
+
+
+	}
+
+	public CustomerModelInt getCustomerModel() {
+		
+		CustomerModelInt CustomerModel = (CustomerModelInt) modelCache.get("Model");
+		if (CustomerModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				CustomerModel = new CustomerModelHibImp();
+			}
+			
+			modelCache.put("CustomerModel", CustomerModel);
+		}
+
+		return CustomerModel;
+
+
+
 	 
 	}
 
-	
+}

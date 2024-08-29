@@ -1,7 +1,7 @@
+
 package in.co.rays.project_3.model;
 
 import java.util.List;
-
 
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -16,7 +16,7 @@ import in.co.rays.project_3.util.HibDataSource;
 
 /**
  * Hibernate implements of course model
- * @author pooja jawariya
+ * @author Anshul Prajapati
  *
  */
 public class CourseModelHibImp implements CourseModelInt {

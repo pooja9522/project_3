@@ -198,6 +198,44 @@
 					</div></li>
 					
 					
+					<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">StaffMember</font>
+
+				</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.STAFFMEMBER_CTL%>"><i
+							class="fas fa-calculator"></i>Add StaffMember</a> <a class="dropdown-item"
+							href="<%=ORSView.STAFFMEMBER_LIST_CTL%>"> <i
+							class="fas fa-sort-amount-down"></i>StaffMember List
+
+						</a>
+
+					</div></li>
+					
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Customer</font>
+
+				</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.CUSTOMER_CTL%>"><i
+							class="fas fa-calculator"></i>Add Customer</a> <a class="dropdown-item"
+							href="<%=ORSView.CUSTOMER_LIST_CTL%>"> <i
+							class="fas fa-sort-amount-down"></i>Customer List
+
+						</a>
+
+					</div></li>
+					
+					
+					
 				 
  			<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -274,6 +312,23 @@
 					</div></li>
 					
 					
+					
+					
+						<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Salary</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.SALARY_CTL%>"><i
+							class="fa fa-calculator"></i>Add Salary</a> <a class="dropdown-item"
+							href="<%=ORSView.SALARY_LIST_CTL%>"> <i
+							class="fa fa-sort-amount-down"></i>Salary List
+						</a>
+					</div></li>
+				
+					
+					
 						 <li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -281,9 +336,9 @@
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.POOJA_CTL%>"><i
-							class="fa fa-calculator"></i>Add number</a> <a class="dropdown-item"
+							class="fa fa-calculator"></i>Add Pooja</a> <a class="dropdown-item"
 							href="<%=ORSView.POOJA_LIST_CTL%>"> <i
-							class="fa fa-sort-amount-down"></i>Add List
+							class="fa fa-sort-amount-down"></i>Add Pooja List
 						</a>
 					</div></li>
 				 

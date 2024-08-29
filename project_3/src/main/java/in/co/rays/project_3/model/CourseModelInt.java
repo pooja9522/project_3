@@ -1,3 +1,4 @@
+
 package in.co.rays.project_3.model;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import in.co.rays.project_3.exception.ApplicationException;
 
 /**
  * Interface of Course model
- * @author pooja jawariya
+ * @author Anshul Prajapati
  *
  */
 public interface CourseModelInt {

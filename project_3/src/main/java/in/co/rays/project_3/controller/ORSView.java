@@ -60,7 +60,17 @@ public interface ORSView {
 	  public String POOJA_VIEW = PAGE_FOLDER + "/PoojaView.jsp";
 	  public String  POOJA_LIST_VIEW = PAGE_FOLDER + "/PoojaListView.jsp";
 	 
-
+	  public String SALARY_VIEW = PAGE_FOLDER + "/SalaryView.jsp";
+	  public String  SALARY_LIST_VIEW = PAGE_FOLDER + "/SalaryListView.jsp";
+	 
+	  public String STAFFMEMBER_VIEW = PAGE_FOLDER + "/StaffMemberView.jsp";
+	  public String  STAFFMEMBER_LIST_VIEW = PAGE_FOLDER + "/StaffMemberListView.jsp";
+	 
+	  public String CUSTOMER_VIEW = PAGE_FOLDER + "/CustomerView.jsp";
+	  public String  CUSTOMER_LIST_VIEW = PAGE_FOLDER + "/CustomerListView.jsp";
+	 
+	  
+	  
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
 	public String MARKSHEET_CTL = APP_CONTEXT + "/ctl/MarksheetCtl";
@@ -106,5 +116,16 @@ public interface ORSView {
 	
 	  public String POOJA_CTL = APP_CONTEXT + "/ctl/PoojaCtl"; public String
 	  POOJA_LIST_CTL = APP_CONTEXT + "/ctl/PoojaListCtl";
+	  
+	  public String SALARY_CTL = APP_CONTEXT + "/ctl/SalaryCtl";
+	   public String SALARY_LIST_CTL = APP_CONTEXT + "/ctl/SalaryListCtl";	 
+	   
+	   public String STAFFMEMBER_CTL = APP_CONTEXT + "/ctl/StaffMemberCtl";
+	   public String STAFFMEMBER_LIST_CTL = APP_CONTEXT + "/ctl/StaffMemberListCtl";
+
+	   public String CUSTOMER_CTL = APP_CONTEXT + "/ctl/CustomerCtl";
+	   public String CUSTOMER_LIST_CTL = APP_CONTEXT + "/ctl/CustomerListCtl";
+
+	 
 	 
 }

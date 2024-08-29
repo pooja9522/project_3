@@ -1,3 +1,4 @@
+
 package in.co.rays.project_3.model;
 
 import java.sql.Connection;
@@ -16,7 +17,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Course model
- * @author pooja jawariya
+ * @author Anshul Prajapati
  *
  */
 public class CourseModelJDBCImpl implements CourseModelInt {
